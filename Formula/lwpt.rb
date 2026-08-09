@@ -7,25 +7,25 @@ class Lwpt < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/lwpt/releases/download/0.4.0/lwpt-0.4.0-macos-arm64.tar.gz"
-      sha256 "a533005dab032fe5df1d0ae8fb9c394347fc8f8dd8c5d40a51d333decb909d0d"
+      url "https://github.com/frostney/lwpt/releases/download/0.5.0/lwpt-0.5.0-macos-arm64.tar.gz"
+      sha256 "a217b7bcd703fab53bdd65db418caa094a06c0ff6336c77f372e6fe9e8a98730"
     end
 
     on_intel do
-      url "https://github.com/frostney/lwpt/releases/download/0.4.0/lwpt-0.4.0-macos-x64.tar.gz"
-      sha256 "8f2ab12eff9bc60511d8ec98ee05c75cd5aaff9f58eb76d8075e06443b22bad0"
+      url "https://github.com/frostney/lwpt/releases/download/0.5.0/lwpt-0.5.0-macos-x64.tar.gz"
+      sha256 "decc509dcafcc293d54e6a218cd271e7715432e60ce9a352c2368dcc90d23436"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/lwpt/releases/download/0.4.0/lwpt-0.4.0-linux-arm64.tar.gz"
-      sha256 "02d5e3414ef72d0b8563232aa73a452dc7c7e553e2d1536b3f629b7f494fe93a"
+      url "https://github.com/frostney/lwpt/releases/download/0.5.0/lwpt-0.5.0-linux-arm64.tar.gz"
+      sha256 "6cbba0afec95bdfc3ec532e052673144c682066778bf40e4253405b0a989be71"
     end
 
     on_intel do
-      url "https://github.com/frostney/lwpt/releases/download/0.4.0/lwpt-0.4.0-linux-x64.tar.gz"
-      sha256 "9635a66477542c4567b89c3a6764144e85d9f856c79f57a73ae5c373e5b3d92b"
+      url "https://github.com/frostney/lwpt/releases/download/0.5.0/lwpt-0.5.0-linux-x64.tar.gz"
+      sha256 "107617904bc33a11cc77a5c105fdd85bd510e11a101af74e5cd8943bdc8f673d"
     end
   end
 
