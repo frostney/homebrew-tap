@@ -3,8 +3,6 @@ class Lwpt < Formula
   homepage "https://github.com/frostney/lwpt"
   license "MIT"
 
-  depends_on "fpc"
-
   on_macos do
     on_arm do
       url "https://github.com/frostney/lwpt/releases/download/0.5.0/lwpt-0.5.0-macos-arm64.tar.gz"
