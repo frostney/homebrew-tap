@@ -5,25 +5,25 @@ class Gocciascript < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.12.0/gocciascript-0.12.0-macos-arm64.zip"
-      sha256 "8172cbd5f355ea79dd7721493fe8074870a4f2435c7af4464562711cc08ec797"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-macos-arm64.zip"
+      sha256 "e2ca0bc6d05f1e5b433a580a0585664fefe52e5e0b6a9e0bf5e36ae30d40da1f"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.12.0/gocciascript-0.12.0-macos-x64.zip"
-      sha256 "01b64c8f14642f20c5c2647b768d2d78310b840232e4c18d273dfc5717f4b919"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-macos-x64.zip"
+      sha256 "7444ac84cfdf518eeb907026edde2e57c192efc4f1fd7a3f9be18d40e49f0856"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.12.0/gocciascript-0.12.0-linux-arm64.tar.gz"
-      sha256 "9c9e36f40822e0abc31c54a024bb50a3deb927678370cb9b2d92dccc31d45d00"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-linux-arm64.tar.gz"
+      sha256 "bc3aed0ba16bc13d7a3a46eeed0ad2c74f0175c4aa2dd67fe32ea2b7dddb159a"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.12.0/gocciascript-0.12.0-linux-x64.tar.gz"
-      sha256 "48896992ac759c6ff7ef817c397b37b9abe7d7de0789d78e9f66549b6857482d"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-linux-x64.tar.gz"
+      sha256 "398e370c1a99dbebce73d037ec4256d7ac89580c9541bf50047a3343bd8dc7da"
     end
   end
 
