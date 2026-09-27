@@ -1,0 +1,39 @@
+name: Actionlint
+
+# `brew style` skips its built-in actionlint pass when this workflow exists.
+# That keeps `brew test-bot --only-tap-syntax` from installing shellcheck,
+# which depends on gmp, which has no Intel macOS bottle.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions: {}
+
+jobs:
+  workflow-syntax:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/brew:main # zizmor: ignore[unpinned-images]
+    permissions:
+      contents: read
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@a657b8b0cd35d0f65cce41fce9b24cf054b49869 # 2026.08.24.1
+        with:
+          core: false
+          cask: false
+
+      - run: brew install actionlint shellcheck zizmor
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - run: zizmor .
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: actionlint
