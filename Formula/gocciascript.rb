@@ -5,25 +5,25 @@ class Gocciascript < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-macos-arm64.zip"
-      sha256 "e2ca0bc6d05f1e5b433a580a0585664fefe52e5e0b6a9e0bf5e36ae30d40da1f"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.14.0/gocciascript-0.14.0-macos-arm64.zip"
+      sha256 "ad4967f9eb6089721c0b519b58f63089423c4d99429591c4c7e3d9745e4076aa"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-macos-x64.zip"
-      sha256 "7444ac84cfdf518eeb907026edde2e57c192efc4f1fd7a3f9be18d40e49f0856"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.14.0/gocciascript-0.14.0-macos-x64.zip"
+      sha256 "bdd836e21dd0d146ed0349240fe6052ff8fec9893ad3b84301011c87bfb516ae"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-linux-arm64.tar.gz"
-      sha256 "bc3aed0ba16bc13d7a3a46eeed0ad2c74f0175c4aa2dd67fe32ea2b7dddb159a"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.14.0/gocciascript-0.14.0-linux-arm64.tar.gz"
+      sha256 "ae6ee19e2b7c54478ab2371671c55eef4feea8dd367dc8bc2f921055c381d15f"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.13.0/gocciascript-0.13.0-linux-x64.tar.gz"
-      sha256 "398e370c1a99dbebce73d037ec4256d7ac89580c9541bf50047a3343bd8dc7da"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.14.0/gocciascript-0.14.0-linux-x64.tar.gz"
+      sha256 "3421c42d8c50563fbcd328d19c5fe1735c7ae583493b325e11e1b3c6168f3c0f"
     end
   end
 
@@ -32,9 +32,9 @@ class Gocciascript < Formula
       GocciaBenchmarkRunner
       GocciaBundler
       GocciaREPL
-      GocciaSandboxRunner
-      GocciaScriptLoader
+      GocciaRunner
       GocciaScriptLoaderBare
+      GocciaTest262Runner
       GocciaTestRunner
       GocciaWasmTestRunner
     ]
@@ -43,7 +43,7 @@ class Gocciascript < Formula
   end
 
   test do
-    output = pipe_output("#{bin}/GocciaScriptLoader --print", "Goccia.version;\n")
+    output = pipe_output("#{bin}/GocciaRunner --print", "Goccia.version;\n")
     assert_match version.to_s, output
   end
 end
