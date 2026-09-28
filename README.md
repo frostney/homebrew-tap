@@ -10,6 +10,7 @@ Install a formula directly:
 ```sh
 brew install frostney/tap/gocciascript
 brew install frostney/tap/lwpt
+brew install frostney/tap/wasmlight
 ```
 
 Or add the tap first:
@@ -18,6 +19,7 @@ Or add the tap first:
 brew tap frostney/tap
 brew install gocciascript
 brew install lwpt
+brew install wasmlight
 ```
 
 ## Formulae
@@ -26,6 +28,7 @@ brew install lwpt
 | --- | --- |
 | `gocciascript` | Sandbox-first ECMAScript runtime and its CLI tools |
 | `lwpt` | Lightweight Pascal toolkit |
+| `wasmlight` | WebAssembly runtime and native compiler for Object Pascal |
 
 LWPT depends on Free Pascal. Homebrew installs the supported `fpc` version
 alongside it.
