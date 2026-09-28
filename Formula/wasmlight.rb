@@ -5,25 +5,25 @@ class Wasmlight < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/wasmlight/releases/download/0.2.0/wasmlight-0.2.0-macos-arm64.tar.gz"
-      sha256 "60a9ec49424293955d0ecf4789eacd71cd87efddc9602c1d40a946600a7b604b"
+      url "https://github.com/frostney/wasmlight/releases/download/0.2.1/wasmlight-0.2.1-macos-arm64.tar.gz"
+      sha256 "363ffb09b9387a53921aae330a7ff5d58c51bffd7080c2e5aa3c52eeef760d91"
     end
 
     on_intel do
-      url "https://github.com/frostney/wasmlight/releases/download/0.2.0/wasmlight-0.2.0-macos-x64.tar.gz"
-      sha256 "b2cd5e4e1101fd6a404c091a830974ba0740c37dba30063fa345a1848df613a0"
+      url "https://github.com/frostney/wasmlight/releases/download/0.2.1/wasmlight-0.2.1-macos-x64.tar.gz"
+      sha256 "8785c6f0141c21ff6ce14fadf71dfaff5fb7fdf03ad6d77fa7cb5117111df00b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/wasmlight/releases/download/0.2.0/wasmlight-0.2.0-linux-arm64.tar.gz"
-      sha256 "37bf4f588d818dbea29f6bb0602877c598a2cb41e67775a1e95fa35cf05d4cb7"
+      url "https://github.com/frostney/wasmlight/releases/download/0.2.1/wasmlight-0.2.1-linux-arm64.tar.gz"
+      sha256 "78065c9c7071baf2411f02fb27a8d47c22f5cae115911b2fff866452a679b2bb"
     end
 
     on_intel do
-      url "https://github.com/frostney/wasmlight/releases/download/0.2.0/wasmlight-0.2.0-linux-x64.tar.gz"
-      sha256 "19cb4d66e9ee5915ae3a1de4073fd002c85425412a15047a09a27213a2a6ab79"
+      url "https://github.com/frostney/wasmlight/releases/download/0.2.1/wasmlight-0.2.1-linux-x64.tar.gz"
+      sha256 "d0349d4a6a864ebe871d4cd466607d87926c70447eee210db88b1d0ba1979104"
     end
   end
 
@@ -54,6 +54,14 @@ class Wasmlight < Formula
 
     system bin/"wasmlight", "compile", testpath/"probe.wasm", "-o", testpath/"probe"
     shell_output("#{testpath}/probe", 37)
+
+    # Run by name from PATH, as a user types it: the compiler must find its
+    # installed shell catalog from its own executable path, not argv[0] or
+    # the current directory (wasmlight#167).
+    with_env(PATH: "#{bin}:#{ENV.fetch("PATH")}") do
+      system "wasmlight", "compile", "probe.wasm", "-o", "probe-by-name"
+    end
+    shell_output("#{testpath}/probe-by-name", 37)
 
     # The same-architecture shell for the other OS is packaged, not run.
     arch = Hardware::CPU.arm? ? "aarch64" : "x86_64"
