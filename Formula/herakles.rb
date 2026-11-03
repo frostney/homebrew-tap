@@ -3,6 +3,8 @@ class Herakles < Formula
   homepage "https://github.com/frostney/herakles"
   license "MIT"
 
+  depends_on "gh"
+
   on_macos do
     on_arm do
       url "https://github.com/frostney/herakles/releases/download/3.0.0/herakles-3.0.0-macos-arm64.tar.gz"
