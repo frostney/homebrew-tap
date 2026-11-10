@@ -1,29 +1,29 @@
 class Gocciascript < Formula
-  desc "Sandbox-first ECMAScript runtime"
+  desc "ECMAScript engine for embedding"
   homepage "https://gocciascript.dev"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.15.1/gocciascript-0.15.1-macos-arm64.zip"
-      sha256 "269af55de9206fbad017b3beb656c7a4a220c7099f364e2b4d7a1c5c6bed5d05"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.17.0/gocciascript-0.17.0-macos-arm64.zip"
+      sha256 "3650c6ab2c62418be9d3aee505cb0995895891e7cc47cb5dde19ae93ebba9d35"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.15.1/gocciascript-0.15.1-macos-x64.zip"
-      sha256 "60aa5bbbd348c99e4a221c60e2a4ca075e2cd082c3796d9c32faa721559acdb3"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.17.0/gocciascript-0.17.0-macos-x64.zip"
+      sha256 "5d42bf2e2f655d58585db09cee22f88ce9af03a5265db4bbac4be7b54aebc55d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.15.1/gocciascript-0.15.1-linux-arm64.tar.gz"
-      sha256 "35ca9cda93313a6af2161f77e587f503303a23ca0d3993051ef70334da2fc6a5"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.17.0/gocciascript-0.17.0-linux-arm64.tar.gz"
+      sha256 "ab07a63a106815cb2050674c61cae3d46f2e36af6bce4f23b3e527fb7b256b3d"
     end
 
     on_intel do
-      url "https://github.com/frostney/GocciaScript/releases/download/0.15.1/gocciascript-0.15.1-linux-x64.tar.gz"
-      sha256 "574ee23bceb5c24b548a4934c20e06150e2e81ec0160024a8ffbbad42cb0d31d"
+      url "https://github.com/frostney/GocciaScript/releases/download/0.17.0/gocciascript-0.17.0-linux-x64.tar.gz"
+      sha256 "c146cd5c0ca6cb5c824014e78a84bb201b6e15f1bf41295585388a51c75885dc"
     end
   end
 

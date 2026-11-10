@@ -26,7 +26,7 @@ brew install wasmlight
 
 | Formula | Description |
 | --- | --- |
-| `gocciascript` | Sandbox-first ECMAScript runtime and its CLI tools |
+| `gocciascript` | ECMAScript engine for embedding, and its CLI tools |
 | `herakles` | Bun-first workspace orchestrator for many repositories |
 | `lwpt` | Lightweight Pascal toolkit |
 | `wasmlight` | WebAssembly runtime and native compiler for Object Pascal |
