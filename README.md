@@ -9,6 +9,7 @@ Install a formula directly:
 
 ```sh
 brew install frostney/tap/gocciascript
+brew install frostney/tap/herakles
 brew install frostney/tap/lwpt
 brew install frostney/tap/wasmlight
 ```
@@ -18,6 +19,7 @@ Or add the tap first:
 ```sh
 brew tap frostney/tap
 brew install gocciascript
+brew install herakles
 brew install lwpt
 brew install wasmlight
 ```
@@ -31,8 +33,17 @@ brew install wasmlight
 | `lwpt` | Lightweight Pascal toolkit |
 | `wasmlight` | WebAssembly runtime and native compiler for Object Pascal |
 
-LWPT depends on Free Pascal. Homebrew installs the supported `fpc` version
-alongside it.
+Homebrew installs the GitHub CLI (`gh`) alongside `herakles`.
+
+The `lwpt` formula installs only the `lwpt` executable. LWPT builds and tests
+projects with Free Pascal unless a project selects another compiler profile.
+The
+[LWPT consumer guide](https://github.com/frostney/lwpt/blob/main/docs/user/consumer-guide.md#install-the-released-toolkit)
+installs Free Pascal and LWPT together on macOS:
+
+```sh
+brew install fpc frostney/tap/lwpt
+```
 
 ## Version policy
 
@@ -49,5 +60,5 @@ versioned formulae.
 
 ```sh
 brew update
-brew upgrade gocciascript lwpt
+brew upgrade gocciascript herakles lwpt wasmlight
 ```
