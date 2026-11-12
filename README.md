@@ -58,7 +58,13 @@ versioned formulae.
 
 ## Upgrade
 
+Upgrade each installed formula by name; `brew upgrade` reports an error for
+a formula that is not installed:
+
 ```sh
 brew update
-brew upgrade gocciascript herakles lwpt wasmlight
+brew upgrade gocciascript
+brew upgrade herakles
+brew upgrade lwpt
+brew upgrade wasmlight
 ```
