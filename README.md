@@ -10,6 +10,7 @@ Install a formula directly:
 ```sh
 brew install frostney/tap/gocciascript
 brew install frostney/tap/herakles
+brew install frostney/tap/hotfpc
 brew install frostney/tap/lwpt
 brew install frostney/tap/wasmlight
 ```
@@ -20,6 +21,7 @@ Or add the tap first:
 brew tap frostney/tap
 brew install gocciascript
 brew install herakles
+brew install hotfpc
 brew install lwpt
 brew install wasmlight
 ```
@@ -30,6 +32,7 @@ brew install wasmlight
 | --- | --- |
 | `gocciascript` | ECMAScript engine for embedding, and its CLI tools |
 | `herakles` | Bun-first workspace orchestrator for many repositories |
+| `hotfpc` | Hot reloading for Free Pascal programs |
 | `lwpt` | Lightweight Pascal toolkit |
 | `wasmlight` | WebAssembly runtime and native compiler for Object Pascal |
 
@@ -43,6 +46,14 @@ installs Free Pascal and LWPT together on macOS:
 
 ```sh
 brew install fpc frostney/tap/lwpt
+```
+
+The `hotfpc` formula installs only the `hotfpc` executable, for macOS on Apple
+silicon and Linux on x86-64. hotfpc builds and runs a program with Free Pascal
+3.2.2 or later and uses its `ppudump`. To install both:
+
+```sh
+brew install fpc frostney/tap/hotfpc
 ```
 
 ## Version policy
@@ -65,6 +76,7 @@ a formula that is not installed:
 brew update
 brew upgrade gocciascript
 brew upgrade herakles
+brew upgrade hotfpc
 brew upgrade lwpt
 brew upgrade wasmlight
 ```
