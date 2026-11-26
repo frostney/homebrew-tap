@@ -1,23 +1,29 @@
 class Hotfpc < Formula
   desc "Hot reloading for Free Pascal programs"
   homepage "https://github.com/frostney/hotfpc"
-  # hotfpc reloads programs for macOS on Apple silicon and Linux on x86-64, and its releases
-  # have builds for those two only. Every system needs a URL, so the macOS build is the
-  # default; the arch requirements below keep it off Intel Macs and arm64 Linux.
-  url "https://github.com/frostney/hotfpc/releases/download/1.1.0/hotfpc-1.1.0-macos-arm64.tar.gz"
-  sha256 "11e995d55988f22c2f28283763a258dc9131c629ff7637861bfe4179e96ac7fa"
   license "MIT"
 
   on_macos do
-    depends_on arch: :arm64
+    on_arm do
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-macos-arm64.tar.gz"
+      sha256 "6adfa72b5d66f68744c70586c76b0d18b32dace79181745f4b1672dbe7e14ce4"
+    end
+
+    on_intel do
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-macos-x64.tar.gz"
+      sha256 "a72ddc5311b2257c7135203bd2e0273f9cd1d3f340517528612bbb5febafc555"
+    end
   end
 
   on_linux do
-    depends_on arch: :x86_64
+    on_arm do
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-linux-arm64.tar.gz"
+      sha256 "68b17a6fb9ac2619c22d055fc951bc3009d4d3c0a5a041c993d958b612af7711"
+    end
 
     on_intel do
-      url "https://github.com/frostney/hotfpc/releases/download/1.1.0/hotfpc-1.1.0-linux-x64.tar.gz"
-      sha256 "a5af2ed8f6b32d61d37eba52563f9aaa8e3faac7e0dea2842dc3a71c2a306cd3"
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-linux-x64.tar.gz"
+      sha256 "6af4abb1e76fe76c27a6433469d122f78f06ffc2f137582a30f843b56c5fb48a"
     end
   end
 

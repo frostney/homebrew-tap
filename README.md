@@ -48,8 +48,8 @@ installs Free Pascal and LWPT together on macOS:
 brew install fpc frostney/tap/lwpt
 ```
 
-The `hotfpc` formula installs only the `hotfpc` executable, for macOS on Apple
-silicon and Linux on x86-64. hotfpc builds and runs a program with Free Pascal
+The `hotfpc` formula installs only the `hotfpc` executable, for macOS and Linux
+on arm64 and x86-64. hotfpc builds and runs a program with Free Pascal
 3.2.2 or later and uses its `ppudump`. To install both:
 
 ```sh
