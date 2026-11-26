@@ -5,25 +5,25 @@ class Hotfpc < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-macos-arm64.tar.gz"
-      sha256 "6adfa72b5d66f68744c70586c76b0d18b32dace79181745f4b1672dbe7e14ce4"
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.1/hotfpc-1.2.1-macos-arm64.tar.gz"
+      sha256 "6138f84ab5cec90ab17ffcfcd841eba3f8f245e887e4f2865523bc1175b5da45"
     end
 
     on_intel do
-      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-macos-x64.tar.gz"
-      sha256 "a72ddc5311b2257c7135203bd2e0273f9cd1d3f340517528612bbb5febafc555"
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.1/hotfpc-1.2.1-macos-x64.tar.gz"
+      sha256 "e896d4dacd29dffee44489fbd6d2716158d15a37f515dc210ac26bb3008943b0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-linux-arm64.tar.gz"
-      sha256 "68b17a6fb9ac2619c22d055fc951bc3009d4d3c0a5a041c993d958b612af7711"
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.1/hotfpc-1.2.1-linux-arm64.tar.gz"
+      sha256 "36b2df015d2a056dbf0cd21fd5ac12ecb8a1ed256e4376688e12d1627388bfc2"
     end
 
     on_intel do
-      url "https://github.com/frostney/hotfpc/releases/download/1.2.0/hotfpc-1.2.0-linux-x64.tar.gz"
-      sha256 "6af4abb1e76fe76c27a6433469d122f78f06ffc2f137582a30f843b56c5fb48a"
+      url "https://github.com/frostney/hotfpc/releases/download/1.2.1/hotfpc-1.2.1-linux-x64.tar.gz"
+      sha256 "af2dd910fbbf85048a2d9bcd954be3fccc6b062fd425698d8a855408be1f7fb3"
     end
   end
 
